@@ -1,0 +1,22 @@
+sentences = [
+    "sun sets behind hills sky turns warm in the evening",
+    "soft wind moves leaves creating calm nature-filled melodies",
+    "quiet park has playful squirrel on grass bright green carpet",
+    "gentle waves touch shore making soothing coastal symphonies",
+    "twinkling stars make patterns casting nighttime magic on everything",
+    "rainbow appears after rain bringing life with vibrant joyous colors",
+    "birds sing at dawn welcoming daylight and a fresh start",
+    "snowflakes fall gently changing the land into a quiet wonder",
+    "city lights shine looking like precious gems in the darkness",
+    "stream flows quietly copying the beauty of surrounding nature",
+    "hills stand tall under a clear sky endless and blue",
+    "moonlight makes shadows creating a quiet and mystical world",
+    "fields of flowers sway gently moved by the warm summer breeze",
+    "thunder rumbles in the distance announcing an approaching storm",
+    "sand holds footprints silent stories of adventures in the desert",
+    "coffee smell fills air waking up the senses gently",
+    "butterflies dance around flowers spreading joy with their colors",
+    "wise owl sits on branch watching the world with knowing eyes",
+    "raindrops tap on the window singing a soothing lullaby",
+    "crickets chirp in harmony creating a natural nighttime symphony"
+]
