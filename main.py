@@ -51,12 +51,12 @@ while True:
     try:
         print(f"{f.CYAN}{sub}")
         print("\n"
-              f"{f.BLUE}time taken : {taken}s\n"
-              f"{f.GREEN}crct words: {correct_words}\n"
-              f"{f.GREEN}wpm : {round((correct_words / (taken + sub)) * 60)} words per minute\n"
-              f"{f.RED}errors: {errors}\n"
-              f"{f.GREEN}Accuracy: {round((correct_words/(correct_words+misspelled_words)*100)-sub)}% \n"
-              f"{f.RED}misspelled words: {misspelled_words}\n"
+              f"{f.LIGHTBLUE_EX}time taken : {taken}s\n"
+              f"{f.LIGHTGREEN_EX}crct words: {correct_words}\n"
+              f"{f.LIGHTGREEN_EX}wpm : {round((correct_words / (taken + sub)) * 60)} words per minute\n"
+              f"{f.LIGHTRED_EX}errors: {errors}\n"
+              f"{f.LIGHTGREEN_EX}Accuracy: {round((correct_words/(correct_words+misspelled_words)*100)-sub)}% \n"
+              f"{f.LIGHTRED_EX}misspelled words: {misspelled_words}\n"
               f"{Style.RESET_ALL}")
     except ZeroDivisionError:
         print("\n"
