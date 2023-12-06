@@ -2,15 +2,16 @@ from prompts import sentences as sen
 import random as rd
 import time
 import keyboard
+from colorama import Fore as f, Style
 
 
 def check_key_press():
-    print("\nPress any key to start typing...\n")
+    print(f.LIGHTCYAN_EX + "\nPress any key to start typing...\n")
     keyboard.read_event(suppress=True)
 
 
 def check_errors(prompt: str, u_prompt: str):
-    errors = []
+    error = []
     count = 0
     sub_count: float = 0
     prom = prompt.split()
@@ -32,29 +33,31 @@ def check_errors(prompt: str, u_prompt: str):
                     sub_count += 1/len(p)
 
             count += 1
-            errors.append(u)
+            error.append(u)
 
     crct = len(prom) - count
-    return crct, count, errors, round(sub_count, 2)
+    return crct, count, error, round(sub_count, 2)
 
 
 while True:
     y = rd.choice(sen)
-    print("\n", y, "\n")
+    print(f.LIGHTYELLOW_EX + "\n", y, "\n")
     check_key_press()
     start = time.time()
-    x = input("\n>> : ")
+    x = input(f.GREEN + "\n>> : ")
     end = time.time()
     taken = round(end - start)
     correct_words, misspelled_words, errors, sub = check_errors(y, x)
     try:
+        print(f"{f.CYAN}{sub}")
         print("\n"
-              f"time taken : {taken}s\n"
-              f"crct words: {correct_words}\n"
-              f"wpm : {round((taken/correct_words+sub)*60)} words per minute\n"
-              f"errors: {errors}\n"
-              f"Accuracy: {round((correct_words/(correct_words+misspelled_words)*100)-sub)}% \n"
-              f"misspelled words: {misspelled_words}\n")
+              f"{f.BLUE}time taken : {taken}s\n"
+              f"{f.GREEN}crct words: {correct_words}\n"
+              f"{f.GREEN}wpm : {round((correct_words / (taken + sub)) * 60)} words per minute\n"
+              f"{f.RED}errors: {errors}\n"
+              f"{f.GREEN}Accuracy: {round((correct_words/(correct_words+misspelled_words)*100)-sub)}% \n"
+              f"{f.RED}misspelled words: {misspelled_words}\n"
+              f"{Style.RESET_ALL}")
     except ZeroDivisionError:
         print("\n"
               f"time taken : {taken}s\n"
